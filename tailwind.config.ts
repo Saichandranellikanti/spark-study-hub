@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// StudySpark custom colors
+				spark: {
+					DEFAULT: '#0ea5e9', // Bright teal
+					light: '#38bdf8', // Lighter teal
+					dark: '#0284c7', // Darker teal
 				}
 			},
 			borderRadius: {
@@ -84,11 +91,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'card-flip': {
+					'0%, 100%': { transform: 'rotateY(0deg)' },
+					'50%': { transform: 'rotateY(180deg)' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-out': {
+					'0%': { opacity: '1' },
+					'100%': { opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'card-flip': 'card-flip 0.6s ease-in-out',
+				'fade-in': 'fade-in 0.3s ease-in',
+				'fade-out': 'fade-out 0.3s ease-out'
 			}
 		}
 	},
