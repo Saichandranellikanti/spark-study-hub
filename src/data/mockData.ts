@@ -4,6 +4,7 @@ import { Subject } from "@/components/common/SubjectGrid";
 import { FlashcardItem } from "@/components/cards/Flashcard";
 import { CheatSheetSection } from "@/components/cards/CheatSheet";
 import { QuizQuestion } from "@/components/cards/Quiz";
+import React from 'react';
 
 // Subjects
 export const subjectsMock: Record<string, Subject[]> = {
@@ -11,7 +12,7 @@ export const subjectsMock: Record<string, Subject[]> = {
     {
       id: "math",
       title: "Mathematics",
-      icon: <Calculator className="h-5 w-5" />,
+      icon: React.createElement(Calculator, { className: "h-5 w-5" }),
       description: "Practice key math concepts and formulas",
       itemCount: 12,
       type: "flashcards"
@@ -19,7 +20,7 @@ export const subjectsMock: Record<string, Subject[]> = {
     {
       id: "science",
       title: "Science",
-      icon: <Microscope className="h-5 w-5" />,
+      icon: React.createElement(Microscope, { className: "h-5 w-5" }),
       description: "Master scientific principles and terminology",
       itemCount: 15,
       type: "flashcards"
@@ -27,7 +28,7 @@ export const subjectsMock: Record<string, Subject[]> = {
     {
       id: "history",
       title: "History",
-      icon: <Globe className="h-5 w-5" />,
+      icon: React.createElement(Globe, { className: "h-5 w-5" }),
       description: "Review historical events, dates, and figures",
       itemCount: 10,
       type: "flashcards"
@@ -37,7 +38,7 @@ export const subjectsMock: Record<string, Subject[]> = {
     {
       id: "math",
       title: "Mathematics",
-      icon: <Calculator className="h-5 w-5" />,
+      icon: React.createElement(Calculator, { className: "h-5 w-5" }),
       description: "Essential math equations and concepts",
       itemCount: 3,
       type: "cheatsheets"
@@ -45,7 +46,7 @@ export const subjectsMock: Record<string, Subject[]> = {
     {
       id: "science",
       title: "Science",
-      icon: <Microscope className="h-5 w-5" />,
+      icon: React.createElement(Microscope, { className: "h-5 w-5" }),
       description: "Quick reference for key scientific principles",
       itemCount: 2,
       type: "cheatsheets"
@@ -53,7 +54,7 @@ export const subjectsMock: Record<string, Subject[]> = {
     {
       id: "history",
       title: "History",
-      icon: <Globe className="h-5 w-5" />,
+      icon: React.createElement(Globe, { className: "h-5 w-5" }),
       description: "Important historical timelines and events",
       itemCount: 2,
       type: "cheatsheets"
@@ -63,7 +64,7 @@ export const subjectsMock: Record<string, Subject[]> = {
     {
       id: "math",
       title: "Mathematics",
-      icon: <Calculator className="h-5 w-5" />,
+      icon: React.createElement(Calculator, { className: "h-5 w-5" }),
       description: "Test your knowledge of mathematical concepts",
       itemCount: 10,
       type: "quizzes"
@@ -71,7 +72,7 @@ export const subjectsMock: Record<string, Subject[]> = {
     {
       id: "science",
       title: "Science",
-      icon: <Microscope className="h-5 w-5" />,
+      icon: React.createElement(Microscope, { className: "h-5 w-5" }),
       description: "Check your understanding of scientific principles",
       itemCount: 8,
       type: "quizzes"
@@ -79,7 +80,7 @@ export const subjectsMock: Record<string, Subject[]> = {
     {
       id: "history",
       title: "History",
-      icon: <Globe className="h-5 w-5" />,
+      icon: React.createElement(Globe, { className: "h-5 w-5" }),
       description: "Challenge yourself on historical facts",
       itemCount: 12,
       type: "quizzes"
