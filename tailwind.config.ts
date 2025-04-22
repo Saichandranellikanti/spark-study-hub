@@ -2,7 +2,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: ["class"],
+  darkMode: false, // Disable dark mode completely
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -20,69 +20,56 @@ export default {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        border: "#e0e6ef",
+        input: "#f1f5f9",
+        ring: "#10C3E6",
+        background: "#f6fbff",
+        foreground: "#273046",
         primary: {
-          DEFAULT: "#10C3E6",
+          DEFAULT: "#13C0EF",
           foreground: "#fff",
         },
         secondary: {
-          DEFAULT: "#1e2836",
-          foreground: "#F3F9FA",
+          DEFAULT: "#e7f7fb",
+          foreground: "#13C0EF",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+          DEFAULT: "#fa7566",
+          foreground: "#fff",
         },
         muted: {
-          DEFAULT: "#253140",
-          foreground: "#a8d9eb",
+          DEFAULT: "#f1f5fa",
+          foreground: "#84a6b8",
         },
         accent: {
-          DEFAULT: "#38e9fa",
+          DEFAULT: "#10C3E6",
           foreground: "#151D24",
         },
         popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
+          DEFAULT: "#ffffff",
+          foreground: "#273046",
         },
         card: {
-          DEFAULT: "#16212b",
-          foreground: "#F3F9FA",
+          DEFAULT: "#ffffff",
+          foreground: "#273046",
         },
         spark: {
-          DEFAULT: "#10C3E6",
-          light: "#38e9fa",
-          dark: "#016072",
-          gradient1: "#10C3E6",
-          gradient2: "#38e9fa",
+          DEFAULT: "#13C0EF",
+          blue: "#10C3E6",
         },
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
+        lg: '1rem',
+        md: '0.75rem',
+        sm: '0.5rem'
       },
       keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' }
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' }
-        },
         'glow': {
           "0%, 100%": { boxShadow: "0 0 14px 2px #10C3E6" },
-          "50%": { boxShadow: "0 0 24px 6px #38e9fa" }
+          "50%": { boxShadow: "0 0 24px 6px #13C0EF" }
         }
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
         'glow': 'glow 2.2s infinite ease-in-out',
       }
     }

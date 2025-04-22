@@ -41,10 +41,10 @@ export default function LoginForm() {
   return (
     <Card className="w-full max-w-md glass-card shadow-xl">
       <CardHeader className="space-y-1 flex items-center justify-center">
-        <div className="logo-halo w-32 h-32 flex items-center justify-center mb-4 drop-shadow-xl animation-glow">
+        <div className="logo-halo w-36 h-36 flex items-center justify-center mb-2 drop-shadow-xl animation-glow bg-[#f6fbff]">
           <img 
-            src="/lovable-uploads/9917b6ff-e616-4361-9549-3edec4a8df18.png" 
-            alt="StudySpark Logo" 
+            src="/lovable-uploads/608d8366-5f7c-47cf-ae1f-f6a8ee62603c.png"
+            alt="StudySpark New Logo"
             className="max-w-full max-h-full object-contain rounded-full"
             style={{ filter: "drop-shadow(0 0 18px #10C3E6)" }}
           />
@@ -52,7 +52,7 @@ export default function LoginForm() {
         <CardTitle className="text-3xl text-center gradient-text font-bold drop-shadow transition-all">
           StudySpark
         </CardTitle>
-        <CardDescription className="text-center text-spark-light">
+        <CardDescription className="text-center text-muted-foreground">
           Enter your email to sign in to your account
         </CardDescription>
       </CardHeader>

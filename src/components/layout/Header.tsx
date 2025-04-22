@@ -1,24 +1,23 @@
+
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuLabel, 
-  DropdownMenuSeparator, 
-  DropdownMenuTrigger 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Menu, User, LogOut } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // In a real app, we would handle the logout logic
     navigate("/login");
   };
 
@@ -27,19 +26,18 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between py-4">
         <div className="flex items-center gap-2">
           <Link to="/dashboard" className="flex items-center gap-2 group transition-all">
-            <span className="logo-halo h-10 w-10 flex items-center justify-center group-hover:scale-110 transition-all">
+            <span className="logo-halo h-12 w-12 flex items-center justify-center group-hover:scale-110 transition-all">
               <img 
-                src="/lovable-uploads/9917b6ff-e616-4361-9549-3edec4a8df18.png" 
-                alt="StudySpark Logo" 
-                className="h-8 w-8 object-contain rounded-full"
-                style={{ filter: "drop-shadow(0 0 6px #10C3E6)" }}
+                src="/lovable-uploads/608d8366-5f7c-47cf-ae1f-f6a8ee62603c.png"
+                alt="StudySpark Logo"
+                className="h-10 w-10 object-contain rounded-full"
+                style={{ filter: "drop-shadow(0 0 6px #13C0EF)" }}
               />
             </span>
-            <span className="text-xl font-bold gradient-text">StudySpark</span>
+            <span className="text-2xl font-extrabold gradient-text">StudySpark</span>
           </Link>
         </div>
         <div className="flex items-center gap-4">
-          <ThemeToggle />
           <div className="flex items-center gap-2 md:hidden">
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
               <SheetTrigger asChild>

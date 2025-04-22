@@ -5,54 +5,28 @@
 
 @layer base {
   :root {
-    /* Light Mode Colors (logo inspired) */
-    --background: 0 0% 100%;
-    --foreground: 228 24% 18%;
+    --background: 212 97% 98%;
+    --foreground: 222 20% 17%;
     --card: 0 0% 100%;
-    --card-foreground: 228 24% 18%;
+    --card-foreground: 222 20% 17%;
     --popover: 0 0% 100%;
-    --popover-foreground: 228 24% 18%;
+    --popover-foreground: 222 20% 17%;
     --primary: 191 89% 48%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 195 33% 92%;
+    --secondary: 192 64% 96%;
     --secondary-foreground: 191 89% 48%;
-    --muted: 203 20% 95%;
-    --muted-foreground: 191 10% 34%;
-    --accent: 185 91% 69%;
+    --muted: 207 24% 95%;
+    --muted-foreground: 210 14% 46%;
+    --accent: 189 93% 54%;
     --accent-foreground: 215 36% 30%;
-    --destructive: 0 78% 63%;
+    --destructive: 2 90% 63%;
     --destructive-foreground: 0 0% 100%;
-    --border: 193 18% 87%;
-    --input: 220 17% 90%;
+    --border: 211 24% 89%;
+    --input: 220 17% 93%;
     --ring: 191 89% 48%;
     --radius: 1rem;
   }
-  .dark {
-    /* Dark Mode Colors (logo inspired) */
-    --background: 214 32% 11%;
-    --foreground: 210 40% 98%;
-    --card: 214 40% 15%;
-    --card-foreground: 210 40% 98%;
-    --popover: 214 32% 11%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 191 89% 48%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 214 28% 18.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 214 20% 15%;
-    --muted-foreground: 188 55% 88%;
-    --accent: 185 91% 69%;
-    --accent-foreground: 215 36% 30%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214 28% 18.5%;
-    --input: 214 28% 18.5%;
-    --ring: 191 89% 48%;
-    --radius: 1rem;
-  }
-}
 
-@layer base {
   * {
     @apply border-border transition-colors duration-300;
   }
@@ -66,26 +40,23 @@
 /* Custom utilities */
 @layer components {
   .glass-card {
-    @apply bg-white/50 dark:bg-[#16212bcc]/80 backdrop-blur-lg border border-white/10 shadow-xl rounded-2xl;
+    @apply bg-white/60 backdrop-blur-lg border border-blue-100/40 shadow-xl rounded-2xl;
   }
 
   .gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-tr from-spark via-spark-light to-black/80 dark:from-spark dark:via-spark-light dark:to-white/75;
+    @apply text-transparent bg-clip-text bg-gradient-to-tr from-spark via-spark-blue to-black/80;
   }
 
   .logo-halo {
-    box-shadow: 0 0 30px 0 #10c3e699, 0 0 12px 4px #38e9fa88;
+    box-shadow: 0 0 30px 0 #10c3e655, 0 0 12px 4px #13C0EF44;
     border-radius: 9999px;
-    background: linear-gradient(135deg, #10C3E6 55%, #38e9fa 100%);
+    background: linear-gradient(135deg, #13C0EF 55%, #10C3E6 100%);
     padding: 0.5rem;
     display: inline-block;
   }
 
   .study-bg {
-    background: linear-gradient(136deg, #f3fafb 45%, #e3f6fa 70%, #10C3E6 100%);
+    background: linear-gradient(136deg, #f3fafb 45%, #e3f6fa 70%, #13C0EF 100%);
     min-height: 100vh;
-  }
-  .dark .study-bg {
-    background: linear-gradient(136deg, #131d2a 45%, #16212b 70%, #10C3E6 100%);
   }
 }

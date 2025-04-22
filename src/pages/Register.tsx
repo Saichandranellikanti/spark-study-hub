@@ -52,11 +52,16 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-background to-background/80">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-[#e3f6fa] to-[#f6fbff]">
       <Card className="w-full max-w-md glass-card">
-        <CardHeader className="space-y-1 flex items-center justify-center">
-          <div className="w-20 h-20 rounded-full neumorphic-card flex items-center justify-center mb-4">
-            <BookText className="h-10 w-10 text-spark" />
+        <CardHeader className="space-y-1 flex flex-col items-center justify-center">
+          <div className="logo-halo w-24 h-24 flex items-center justify-center mb-4 animation-glow bg-[#f6fbff]">
+            <img
+              src="/lovable-uploads/608d8366-5f7c-47cf-ae1f-f6a8ee62603c.png"
+              alt="StudySpark New Logo"
+              className="max-w-full max-h-full object-contain rounded-full"
+              style={{ filter: "drop-shadow(0 0 12px #10C3E6)" }}
+            />
           </div>
           <CardTitle className="text-2xl text-center gradient-text font-bold">Create an Account</CardTitle>
           <CardDescription className="text-center">
