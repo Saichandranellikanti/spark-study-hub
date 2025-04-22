@@ -5,33 +5,33 @@
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
+    --background: 214 32% 11%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 15%;
+    --card: 214 40% 15%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 11%;
+    --popover: 214 32% 11%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 196 94% 48%;
+    --primary: 191 89% 48%;  /* #10C3E6 */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 214 28% 18.5%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 214 20% 15%;
+    --muted-foreground: 188 55% 88%;
 
-    --accent: 196 94% 48%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 185 91% 69%; /* #38e9fa */
+    --accent-foreground: 215 36% 30%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 196 94% 48%;
+    --border: 214 28% 18.5%;
+    --input: 214 28% 18.5%;
+    --ring: 191 89% 48%; 
 
     --radius: 1rem;
   }
@@ -47,20 +47,27 @@
   }
 }
 
+/* Custom utilities */
 @layer components {
   .glass-card {
-    @apply bg-black/30 backdrop-blur-md border border-white/10 shadow-lg;
-  }
-  
-  .neumorphic-card {
-    @apply bg-card/90 rounded-xl shadow-[5px_5px_15px_rgba(0,0,0,0.3),_-5px_-5px_15px_rgba(255,255,255,0.05)];
+    @apply bg-[#16212bcc]/80 backdrop-blur-lg border border-white/10 shadow-xl rounded-2xl; 
   }
   
   .gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-r from-spark-light to-spark;
+    @apply text-transparent bg-clip-text bg-gradient-to-tr from-spark via-spark-light to-white/75;
   }
-  
-  .spark-gradient {
-    @apply bg-gradient-to-r from-spark-dark via-spark to-spark-light;
+
+  .logo-halo {
+    box-shadow: 0 0 30px 0 #10c3e699, 0 0 12px 4px #38e9fa88;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, #10C3E6 55%, #38e9fa 100%);
+    padding: 0.5rem;
+    display: inline-block;
+  }
+
+  /* Big, elegant page bg gradient (for login etc) */
+  .study-bg {
+    background: linear-gradient(136deg, #131d2a 45%, #16212b 70%, #10C3E6 100%);
+    min-height: 100vh;
   }
 }

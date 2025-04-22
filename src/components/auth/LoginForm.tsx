@@ -20,9 +20,8 @@ export default function LoginForm() {
     // Simulate login delay
     setTimeout(() => {
       setIsLoading(false);
-      
-      // This is just a placeholder for demo purposes
-      // In a real app, we would check credentials properly
+
+      // Placeholder for demo purposes
       if (email && password) {
         toast({
           title: "Login successful",
@@ -40,17 +39,20 @@ export default function LoginForm() {
   };
 
   return (
-    <Card className="w-full max-w-md glass-card">
+    <Card className="w-full max-w-md glass-card shadow-xl">
       <CardHeader className="space-y-1 flex items-center justify-center">
-        <div className="w-32 h-32 flex items-center justify-center mb-4">
+        <div className="logo-halo w-32 h-32 flex items-center justify-center mb-4 drop-shadow-xl animation-glow">
           <img 
             src="/lovable-uploads/9917b6ff-e616-4361-9549-3edec4a8df18.png" 
             alt="StudySpark Logo" 
-            className="max-w-full max-h-full object-contain"
+            className="max-w-full max-h-full object-contain rounded-full"
+            style={{ filter: "drop-shadow(0 0 18px #10C3E6)" }}
           />
         </div>
-        <CardTitle className="text-2xl text-center gradient-text font-bold">StudySpark</CardTitle>
-        <CardDescription className="text-center">
+        <CardTitle className="text-3xl text-center gradient-text font-bold drop-shadow transition-all">
+          StudySpark
+        </CardTitle>
+        <CardDescription className="text-center text-spark-light">
           Enter your email to sign in to your account
         </CardDescription>
       </CardHeader>
@@ -65,7 +67,7 @@ export default function LoginForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="bg-background border-secondary"
+                className="bg-background border-accent/30 focus-visible:ring-spark"
               />
             </div>
             <div className="grid gap-2">
@@ -76,10 +78,14 @@ export default function LoginForm() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="bg-background border-secondary"
+                className="bg-background border-accent/30 focus-visible:ring-spark"
               />
             </div>
-            <Button type="submit" className="w-full" disabled={isLoading}>
+            <Button
+              type="submit"
+              className="w-full bg-gradient-to-r from-spark-light to-spark text-white font-semibold shadow-lg hover:from-spark hover:to-spark-light hover:scale-[1.01] transition-all"
+              disabled={isLoading}
+            >
               {isLoading ? "Signing in..." : "Sign In"}
             </Button>
           </div>
@@ -87,13 +93,13 @@ export default function LoginForm() {
       </CardContent>
       <CardFooter className="flex flex-col space-y-2">
         <div className="text-center text-sm">
-          <Link to="/forgot-password" className="text-spark hover:text-spark-light">
+          <Link to="/forgot-password" className="text-spark hover:text-spark-light underline">
             Forgot password?
           </Link>
         </div>
         <div className="text-center text-sm text-muted-foreground">
           Don&apos;t have an account?{" "}
-          <Link to="/register" className="text-spark hover:text-spark-light">
+          <Link to="/register" className="text-spark hover:text-spark-light underline">
             Sign up
           </Link>
         </div>

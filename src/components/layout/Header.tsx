@@ -26,12 +26,15 @@ export default function Header() {
     <header className="sticky top-0 z-30 w-full border-b bg-background/80 backdrop-blur-sm">
       <div className="container flex h-16 items-center justify-between py-4">
         <div className="flex items-center gap-2">
-          <Link to="/dashboard" className="flex items-center gap-2">
-            <img 
-              src="/lovable-uploads/9917b6ff-e616-4361-9549-3edec4a8df18.png" 
-              alt="StudySpark Logo" 
-              className="h-8 w-8"
-            />
+          <Link to="/dashboard" className="flex items-center gap-2 group transition-all">
+            <span className="logo-halo h-10 w-10 flex items-center justify-center group-hover:scale-110 transition-all">
+              <img 
+                src="/lovable-uploads/9917b6ff-e616-4361-9549-3edec4a8df18.png" 
+                alt="StudySpark Logo" 
+                className="h-8 w-8 object-contain rounded-full"
+                style={{ filter: "drop-shadow(0 0 6px #10C3E6)" }}
+              />
+            </span>
             <span className="text-xl font-bold gradient-text">StudySpark</span>
           </Link>
         </div>
