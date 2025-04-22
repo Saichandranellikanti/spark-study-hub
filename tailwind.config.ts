@@ -26,11 +26,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#10C3E6", // vibrant cyan-teal from logo
+          DEFAULT: "#10C3E6",
           foreground: "#fff",
         },
         secondary: {
-          DEFAULT: "#1e2836", // slightly lighter than pure black for background accents
+          DEFAULT: "#1e2836",
           foreground: "#F3F9FA",
         },
         destructive: {
@@ -39,10 +39,10 @@ export default {
         },
         muted: {
           DEFAULT: "#253140",
-          foreground: "#a8d9eb", // slightly teal-muted-foreground
+          foreground: "#a8d9eb",
         },
         accent: {
-          DEFAULT: "#38e9fa", // light cyan touch for accents
+          DEFAULT: "#38e9fa",
           foreground: "#151D24",
         },
         popover: {
@@ -50,16 +50,15 @@ export default {
           foreground: "hsl(var(--popover-foreground))",
         },
         card: {
-          DEFAULT: "#16212b", // glass card (dark navy/blue)
+          DEFAULT: "#16212b",
           foreground: "#F3F9FA",
         },
-        // StudySpark custom colors
         spark: {
-          DEFAULT: "#10C3E6", // Main cyan/teal as in logo
-          light: "#38e9fa", // lighter accent in logo gradient
-          dark: "#016072", // darkest blue accent
-          gradient1: "#10C3E6", // primary (left of gradient)
-          gradient2: "#38e9fa", // secondary (right of gradient)
+          DEFAULT: "#10C3E6",
+          light: "#38e9fa",
+          dark: "#016072",
+          gradient1: "#10C3E6",
+          gradient2: "#38e9fa",
         },
       },
       borderRadius: {
