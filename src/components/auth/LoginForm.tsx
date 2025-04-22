@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/components/ui/use-toast";
-import { BookText } from "lucide-react";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -43,8 +42,12 @@ export default function LoginForm() {
   return (
     <Card className="w-full max-w-md glass-card">
       <CardHeader className="space-y-1 flex items-center justify-center">
-        <div className="w-20 h-20 rounded-full neumorphic-card flex items-center justify-center mb-4">
-          <BookText className="h-10 w-10 text-spark" />
+        <div className="w-32 h-32 flex items-center justify-center mb-4">
+          <img 
+            src="/lovable-uploads/9917b6ff-e616-4361-9549-3edec4a8df18.png" 
+            alt="StudySpark Logo" 
+            className="max-w-full max-h-full object-contain"
+          />
         </div>
         <CardTitle className="text-2xl text-center gradient-text font-bold">StudySpark</CardTitle>
         <CardDescription className="text-center">

@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu";
-import { BookText, Menu, User, LogOut } from "lucide-react";
+import { Menu, User, LogOut } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +27,11 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between py-4">
         <div className="flex items-center gap-2">
           <Link to="/dashboard" className="flex items-center gap-2">
-            <BookText className="h-6 w-6 text-spark" />
+            <img 
+              src="/lovable-uploads/9917b6ff-e616-4361-9549-3edec4a8df18.png" 
+              alt="StudySpark Logo" 
+              className="h-8 w-8"
+            />
             <span className="text-xl font-bold gradient-text">StudySpark</span>
           </Link>
         </div>
